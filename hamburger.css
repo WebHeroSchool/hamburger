@@ -1,0 +1,127 @@
+h1 {
+  text-align: center;
+}
+@media (min-width: 320px) {
+    body {
+      margin: 0;
+    }
+    h1 {
+      font-size: 15px;
+      color: rgb(255, 0, 140);	
+     }
+    .nav {
+      background: #AFEEEE;
+    }
+    .nav__hamburger, .nav__hamburger::after, .nav__hamburger::before  {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #555;
+    border-radius: .1em;
+    position: absolute;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .nav__hamburger::after {
+    content: '';
+    top: 16px;
+    transition: .7s;
+  }
+  .nav__hamburger::before {
+    content: '';
+    top: 8px;
+    
+  }
+  .nav__button {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-content: center;
+    width: 30px;
+    height: 20px;
+    padding: 10px;
+  }
+  #checkbox {
+    display: none;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: -130px;
+    transition: .7s;
+    background: #AFEEEE;
+  }
+  .menu__item {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    padding: 8px;
+    cursor: pointer;
+  }
+  .menu__item:hover {
+    background: #96d9d9;
+  }
+  #checkbox:checked ~ .menu {
+    transform: translateX(130px);
+  }
+  #checkbox:checked ~ .nav__button > .nav__hamburger {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+  #checkbox:checked ~ .nav__button > .nav__hamburger::before {
+    display: none;
+  }
+  #checkbox:checked ~ .nav__button > .nav__hamburger::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  }
+@media (min-width: 481px) {
+    h1 {
+      font-size: 20px;
+      color: rgb(55, 0, 255);	
+   }
+  }
+@media (min-width: 641px) {
+    h1 {
+      font-size: 30px;
+      color: rgb(0, 119, 255);	
+     }
+     
+  }  
+
+@media (min-width: 961px) {
+    #checkbox {
+      display: none;
+    }
+    .nav__button {
+      display: none;
+    }
+    .menu {
+      top: 0;
+      left: 0;
+    }
+    .menu__item {
+      display: inline-block;
+      padding: 8px;
+  }
+  h1 {
+    font-size: 50px;
+    color: rgb(38, 129, 106);
+    }
+  }
+@media (min-width: 1025px) {
+    h1 {
+      font-size: 60px;
+      color: rgb(0, 128, 28);
+      }
+  }
+@media (min-width: 1281px) {
+  h1 {
+    font-size: 65px;
+    color: rgb(100, 128, 0);
+    }
+}
